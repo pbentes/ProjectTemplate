@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/pbentes/Source-Engine-Movement/actions/workflows/build.yml/badge.svg)](https://github.com/pbentes/Source-Engine-Movement/actions/)
+[![Build](https://github.com/pbentes/ProjectTemplate/actions/workflows/build.yml/badge.svg)](https://github.com/pbentes/ProjectTemplate/actions/workflows/build.yml)
 
 # C++ Project Starter Template
 
