@@ -38,7 +38,7 @@ jobs:
     strategy:
         fail-fast: false
         matrix:
-            build_type: [Debug, Release, Distribution]
+            build_type: [Debug, Release]
 
     steps:
     - name: Checkout Code
