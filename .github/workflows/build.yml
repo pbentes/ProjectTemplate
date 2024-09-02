@@ -50,5 +50,5 @@ jobs:
     - name: Build
       run: msbuild VS2022_CL\Project.sln /property:Configuration=${{matrix.build_type}}
     - name: Run
-      working-directory: ${{github.workspace}}\VS2022_CL\${{matrix.build_type}}
+      working-directory: ${{github.workspace}}\VS2022_CL\app\${{matrix.build_type}}
       run: .\app.exe 
