@@ -3,8 +3,6 @@ cmake_minimum_required(VERSION 3.16)
 set(ProjectName "app")
 project(${ProjectName})
 
-set(CMAKE_DEBUG_POSTFIX "")
-
 link_directories(
     ${enet_BINARY_DIR}
     ${flecs_BINARY_DIR}
