@@ -1,4 +1,7 @@
 [![Build](https://github.com/pbentes/ProjectTemplate/actions/workflows/build.yml/badge.svg)](https://github.com/pbentes/ProjectTemplate/actions/workflows/build.yml)
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/pbentes/projecttemplate)](https://www.codefactor.io/repository/github/pbentes/projecttemplate)
+
+
 
 # C++ Project Starter Template
 
