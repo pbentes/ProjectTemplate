@@ -19,7 +19,7 @@ jobs:
     strategy:
         fail-fast: false
         matrix:
-            build_type: [Debug, Release, Distribution]
+            build_type: [Debug, Release]
 
     steps:
     - name: Checkout Code
@@ -28,9 +28,9 @@ jobs:
       run: cmake -B ${{github.workspace}}/Linux_${{matrix.build_type}}_${{matrix.clang_version}} -DCMAKE_BUILD_TYPE=${{matrix.build_type}} -DCMAKE_CXX_COMPILER=clang++ .
     - name: Build
       run: cmake --build ${{github.workspace}}/Linux_${{matrix.build_type}}_${{matrix.clang_version}} -j 2
-    - name: Run
+    - name: Test
       working-directory: ${{github.workspace}}/Linux_${{matrix.build_type}}_${{matrix.clang_version}}
-      run: ./app/app
+      run: ./tests/tests
       
   msvc_cl:
     runs-on: windows-latest
@@ -49,6 +49,6 @@ jobs:
       run: cmake -B ${{github.workspace}}/VS2022_CL -G "Visual Studio 17 2022" -A x64 .
     - name: Build
       run: msbuild VS2022_CL\Project.sln /property:Configuration=${{matrix.build_type}}
-    - name: Run
+    - name: Test
       working-directory: ${{github.workspace}}\VS2022_CL\app\${{matrix.build_type}}
-      run: .\app.exe 
+      run: .\tests.exe 
