@@ -13,11 +13,20 @@ Core builds into a static library and is meant to contain common code intended f
 3) The three included CMake build files are CMakeLists.txt, core/CMakeLists.txt and app/CMakeLists.txt - you can edit these to customise your build configurations, edit the names of your projects and workspace/solution, etc.
 4) Create a build folder, cd into it and run `cmake ..` to generate a project
 
+To build the project run the following commands:
+
+```
+cmake -S . -B build
+cmake --build build
+```
+
 ## Included
 
-- Some example code (in app/src and core/src) to provide a starting point and test
-- Simple .gitignore to ignore project files and binaries
-- Github Actions to check for build status
+- Some example code (in app/src, core/src and tests/src) to provide a starting point
+- An example of how to use CMake to fetch dependencies in the vendor folder
+- An example test written using the [GoogleTest](https://google.github.io/googletest/) library
+- .gitignore to ignore project files and binaries
+- Github Actions to check for build status and run the tests
 
 ## License
 
